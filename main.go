@@ -1,8 +1,8 @@
 package main
 
 import (
+	"cargo-hm1/structure"
 	"fmt"
-	"lesson1/structure"
 	"math/rand"
 	"os"
 	"os/exec"
@@ -172,7 +172,7 @@ func createNewOrder() {
 	if v, found := customers[newReceiver.IdNumber]; found {
 		fmt.Println("We found a customer: ", v)
 		fmt.Println("We'll continue with this customer..")
-		newSender = *customers[newSender.IdNumber]
+		newReceiver = *customers[newReceiver.IdNumber]
 	} else {
 		fmt.Print("Receiver Name: \t")
 		fmt.Scan(&newReceiver.Name)
